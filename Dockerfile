@@ -3,8 +3,8 @@ FROM alpine:latest
 RUN apk update \
     && apk upgrade
 
-RUN apk add iputils
-RUN apk add hey
-RUN apk add curl
+COPY apk_packages apk_packages
+
+RUN apk add $(cat apk_packages | tr '\n' ' ')
 
 CMD ["/bin/sh"]
