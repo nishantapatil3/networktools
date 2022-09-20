@@ -34,5 +34,7 @@ jobs:
     - name: Sync Docker hub readme
       uses: ms-jpq/sync-dockerhub-readme@v1
       with:
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
         repository: nishantapatil3/networktools
         readme: "./README.md"
