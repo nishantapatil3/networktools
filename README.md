@@ -23,3 +23,5 @@ kubectl run networktools --image=nishantapatil3/networktools:latest -n default s
 - hey (http traffic generator)
 - vim
 ```
+
+> **_NOTE:_** to add new packages simple edit `apk_packages` file and add the name of new package
