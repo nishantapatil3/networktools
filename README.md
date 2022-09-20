@@ -24,4 +24,4 @@ kubectl run networktools --image=nishantapatil3/networktools:latest -n default s
 - vim
 ```
 
-> **_NOTE:_** to add new packages simple edit `apk_packages` file and add the name of new package
+> **_NOTE:_** to add new packages edit `apk_packages` file and add the name of new package, then `make docker-build`
