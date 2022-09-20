@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "networktools"
+spec:
+  selector:
+    matchLabels:
+      app: "networktools-label"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "networktools-label"
+    spec:
+      containers:
+        - name: networktools
+          image: nishantapatil3/networktools:latest
+          command: ["/bin/sleep","infinity"]
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
