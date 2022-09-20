@@ -27,4 +27,6 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/networktools:latest
+        tags: |
+          ${{ secrets.DOCKER_HUB_USERNAME }}/networktools:latest
+          ${{ secrets.DOCKER_HUB_USERNAME }}/networktools:${{ github.ref }}
