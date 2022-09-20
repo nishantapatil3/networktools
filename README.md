@@ -8,7 +8,7 @@ Collection of most commonly used network tools in an alpine linux based lightwei
 ## Run on
 Run on docker desktop
 ```
-docker run --rm -it --entrypoint="/bin/sh" docker.io/library/networktools:latest
+docker run --rm -it --entrypoint="/bin/sh" docker.io/nishantapatil3/networktools:latest
 ```
 
 Run on kubernetes
