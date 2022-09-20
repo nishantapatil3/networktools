@@ -25,8 +25,15 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
+        platforms: linux/amd64,linux/arm64
         file: ./Dockerfile
         push: true
         tags: |
           ${{ secrets.DOCKER_HUB_USERNAME }}/networktools:latest
-          ${{ secrets.DOCKER_HUB_USERNAME }}/networktools:${{ github.ref }}
+          ${{ secrets.DOCKER_HUB_USERNAME }}/networktools:${{ GITHUB_BASE_REF }}
+
+    - name: Sync Docker hub readme
+      uses: ms-jpq/sync-dockerhub-readme@v1
+      with:
+        repository: nishantapatil3/networktools
+        readme: "./README.md"
