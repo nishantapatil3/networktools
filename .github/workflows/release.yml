@@ -30,7 +30,6 @@ jobs:
         push: true
         tags: |
           ${{ secrets.DOCKER_HUB_USERNAME }}/networktools:latest
-          ${{ secrets.DOCKER_HUB_USERNAME }}/networktools:${{ env.BRANCH }}
 
     - name: Sync Docker hub readme
       uses: ms-jpq/sync-dockerhub-readme@v1
