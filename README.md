@@ -5,8 +5,20 @@
 
 Collection of most commonly used network tools in a Container
 
-Currenlty has below apk added packages
+# Run on
+Run on docker desktop
+```
+docker run --rm -it --entrypoint="/bin/sh" docker.io/library/networktools:latest
+```
+
+Run on kubernetes
+```
+kubectl run networktools --image=nishantapatil3/networktools:latest -n default sleep infinity
+```
+
+### Added packages
 ```
 - iputils
+- curl
 - hey (http traffic generator)
 ```
