@@ -10,4 +10,7 @@ RUN apk update && apk upgrade
 COPY apk_packages apk_packages
 RUN apk add $(cat apk_packages | tr '\n' ' ')
 
+# Copy predefined configs
+COPY configs/vimrc /root/.vimrc
+
 CMD ["/bin/sh"]
