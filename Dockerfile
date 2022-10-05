@@ -18,5 +18,3 @@ COPY entrypoint.sh /entrypoint.sh
 EXPOSE 80
 
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
-
-CMD ["/bin/sh"]
