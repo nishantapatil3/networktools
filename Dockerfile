@@ -8,7 +8,7 @@ RUN apk update && apk upgrade
 
 # Add packages
 COPY apk_packages apk_packages
-RUN apk add $(cat apk_packages | tr '\n' ' ')
+RUN apk add --no-cache $(cat apk_packages | tr '\n' ' ')
 
 # Copy predefined configs
 COPY configs/vimrc /root/.vimrc

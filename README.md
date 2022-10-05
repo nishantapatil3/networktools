@@ -16,6 +16,11 @@ Run on kubernetes
 kubectl run networktools --image=nishantapatil3/networktools:latest -n default sleep infinity
 ```
 
+Deploy on kubernetes using kustomize
+```
+kubectl apply -k https://github.com/nishantapatil3/networktools//charts/kustomize
+```
+
 ## Added packages
 ```
 - iputils
