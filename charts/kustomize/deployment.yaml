@@ -15,7 +15,7 @@ spec:
       containers:
         - name: networktools
           image: nishantapatil3/networktools:latest
-          command: ["/bin/sleep","infinity"]
+          command: ["/bin/sh","/entrypoint.sh"]
           imagePullPolicy: IfNotPresent
           resources:
             limits:
