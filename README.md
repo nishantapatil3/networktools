@@ -27,6 +27,8 @@ kubectl apply -k https://github.com/nishantapatil3/networktools//charts/kustomiz
 - curl
 - hey (http traffic generator)
 - vim
+- openrc
+- nginx
 ```
 
 > **_NOTE:_** to add new packages edit `apk_packages` file and add the name of new package, then `make docker-build`

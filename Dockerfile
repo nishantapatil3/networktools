@@ -12,5 +12,11 @@ RUN apk add --no-cache $(cat apk_packages | tr '\n' ' ')
 
 # Copy predefined configs
 COPY configs/vimrc /root/.vimrc
+COPY configs/nginx.conf /etc/nginx/nginx.conf
+COPY entrypoint.sh /entrypoint.sh
+
+EXPOSE 80
+
+ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
 
 CMD ["/bin/sh"]
