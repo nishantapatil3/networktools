@@ -6,7 +6,9 @@ openrc
 touch /run/openrc/softlevel
 
 # start nginx
+echo "Starting nginx"
 nginx
+echo "Started nginx"
 
 printf "\nHello, World!\n"
 
