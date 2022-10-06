@@ -10,7 +10,7 @@ echo "Starting nginx"
 nginx
 echo "Started nginx"
 
-printf "\nHello, World!\n"
+printf "\nHello from networktools!\n"
 
 # Start shell
 /bin/sh
