@@ -7,8 +7,12 @@ LABEL org.opencontainers.image.authors="nishant.apatil3@gmail.com"
 RUN apk update && apk upgrade
 
 # Add packages
-COPY apk_packages apk_packages
+COPY configs/apk_packages apk_packages
 RUN apk add --no-cache $(cat apk_packages | tr '\n' ' ')
+
+# Run install script
+COPY configs/install_script.sh /install_script.sh
+RUN /install_script.sh
 
 # Copy predefined configs
 COPY configs/vimrc /root/.vimrc
