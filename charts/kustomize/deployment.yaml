@@ -17,7 +17,7 @@ spec:
         - name: networktools
           image: nishantapatil3/networktools:latest
           command: ["/bin/sh"]
-          args: ["-c","/bin/sh /entrypoint.sh;while true; do echo hello; sleep 10;done"]
+          args: ["-c","/bin/sh /entrypoint.sh;while true; do echo hello; sleep 100;done"]
           imagePullPolicy: Always
           resources:
             limits:
