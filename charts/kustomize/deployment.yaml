@@ -16,9 +16,7 @@ spec:
       containers:
         - name: networktools
           image: nishantapatil3/networktools:latest
-          command: ["/bin/sh"]
-          args: ["-c","/bin/sh /entrypoint.sh;while true; do echo hello; sleep 100;done"]
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           resources:
             limits:
               memory: "128Mi"

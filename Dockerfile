@@ -22,5 +22,4 @@ COPY configs/nginx.conf /etc/nginx/nginx.conf
 COPY configs/index.html /var/lib/nginx/html/index.html
 EXPOSE 80
 
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]
