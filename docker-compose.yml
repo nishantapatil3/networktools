@@ -1,0 +1,5 @@
+services:
+  networktools:
+    image: docker.io/nishantapatil3/networktools:latest
+    network_mode: host
+    restart: "no"
