@@ -1,7 +1,6 @@
 # Networktools
 
 [![CI Actions status](https://github.com/nishantapatil3/networktools/workflows/CI/badge.svg)](https://github.com/nishantapatil3/networktools/actions/workflows/ci.yml)
-[![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)](https://github.com/nishantapatil3/networktools/pkgs/container/networktools)
 
 Collection of most commonly used network tools in an alpine linux based lightweight container
 
