@@ -1,4 +1,4 @@
-IMG="nishantapatil3/networktools:latest"
+IMG="ghcr.io/nishantapatil3/networktools:latest"
 
 docker-build:
 	docker build -t ${IMG} -f Dockerfile .

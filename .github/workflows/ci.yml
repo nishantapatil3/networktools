@@ -12,11 +12,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
       
-    - name: Login to Docker Hub
+    - name: Login to GitHub Container Registry
       uses: docker/login-action@v1
       with:
-        username: ${{ secrets.DOCKER_HUB_USERNAME }}
-        password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
@@ -29,12 +30,5 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: |
-          ${{ secrets.DOCKER_HUB_USERNAME }}/networktools:latest
+          ghcr.io/${{ github.repository_owner }}/networktools:latest
 
-    - name: Sync Docker hub readme
-      uses: ms-jpq/sync-dockerhub-readme@v1
-      with:
-        username: ${{ secrets.DOCKER_HUB_USERNAME }}
-        password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-        repository: nishantapatil3/networktools
-        readme: "./README.md"

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: networktools
-          image: nishantapatil3/networktools:latest
+          image: ghcr.io/nishantapatil3/networktools:latest
           imagePullPolicy: IfNotPresent
           resources:
             limits:

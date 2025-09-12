@@ -1,19 +1,19 @@
 # Networktools
 
 [![CI Actions status](https://github.com/nishantapatil3/networktools/workflows/CI/badge.svg)](https://github.com/nishantapatil3/networktools/actions/workflows/ci.yml)
-[![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)](https://hub.docker.com/r/nishantapatil3/networktools)
+[![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)](https://github.com/nishantapatil3/networktools/pkgs/container/networktools)
 
 Collection of most commonly used network tools in an alpine linux based lightweight container
 
 ## Run on
 Run on docker desktop
 ```
-docker run --rm -it --entrypoint="/bin/sh" docker.io/nishantapatil3/networktools:latest
+docker run --rm -it --entrypoint="/bin/sh" ghcr.io/nishantapatil3/networktools:latest
 ```
 
 Run on kubernetes
 ```
-kubectl run networktools --image=nishantapatil3/networktools:latest -n default sleep infinity
+kubectl run networktools --image=ghcr.io/nishantapatil3/networktools:latest -n default sleep infinity
 ```
 
 Deploy on kubernetes using kustomize
